@@ -104,6 +104,13 @@ Set-CASMailbox tony@contoso.com -DisplayName "Tony Smith" -MAPIBlockOutlookRpcHt
 
 This example sets the display name and disables Outlook Anywhere access for the user tony@contoso.com.
 
+### Example 4
+```powershell
+Set-CASMailbox tony@contoso.com -EwsAllowList @{Add="*Teams*","MicrosoftNinja/*"}
+```
+
+This example allow showing calendar icon in Teams for tony@contoso.com when it's missing. First, you need to check if EWS is enabled. See [Get-CASMailbox](https://docs.microsoft.com/en-us/powershell/module/exchange/get-casmailbox?view=exchange-ps).
+
 ## PARAMETERS
 
 ### -Identity
