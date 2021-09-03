@@ -103,6 +103,13 @@ Get-CASMailbox -RecipientTypeDetails SharedMailbox | Select *
 
 In Exchange Online, this example filters the cmdlet output to only include shared mailboxes.
 
+### Example 5
+```powershell
+Get-CASMailbox -Identity "tony@contoso.com" | fl EwsEnabled
+```
+
+In Exchange Online, this example check if EWS (Exchange Web Services) is enabled, if the cmdlet output $false, EWS is disabled. The possible concequence is missing calendar icon in Teams desktop and web. To enable missin icon see [Set-CASMailbox](https://docs.microsoft.com/en-us/powershell/module/exchange/set-casmailbox?view=exchange-ps)
+
 ## PARAMETERS
 
 ### -Identity
